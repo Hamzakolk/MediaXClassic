@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><link rel="stylesheet" href="style.css"></head>
+<body data-page="eq">
+  <div class="bar"><span class="drag" style="-webkit-app-region:drag"></span>
+    <span><button data-win-min>–</button><button data-win-close>✕</button></span></div>
+  <div class="row btns" style="padding:6px">
+    <span>Preamp</span><input id="pre" type="range" min="-12" max="12" value="0" style="width:120px">
+    <button id="flat">Flat</button>
+  </div>
+  <div class="eq" id="bands"></div>
+  <script src="app.js"></script>
+</body></html>

@@ -1,0 +1,29 @@
+:root { --bg:#1B1D22; --panel:#262a31; --edge:#0d0f12; --hi:#3c424c; --text:#c9d1d9; --lcd:#7CFC9A; --lcd-bg:#0b1a10; --accent:#7CFC9A; }
+body.steel { --bg:#17212b; --panel:#22303d; --edge:#081018; --hi:#34495e; --accent:#66c2ff; --lcd:#66c2ff; --lcd-bg:#071522; }
+body.amber { --bg:#241b12; --panel:#33261a; --edge:#120c06; --hi:#5a4330; --accent:#ffb347; --lcd:#ffb347; --lcd-bg:#1a1007; }
+* { box-sizing:border-box; }
+html,body { margin:0; height:100%; background:var(--bg); color:var(--text); font:12px "Segoe UI",sans-serif; overflow:hidden; user-select:none; }
+.bar { height:22px; display:flex; align-items:center; justify-content:space-between; padding:0 6px; background:linear-gradient(var(--panel),var(--edge)); border-bottom:1px solid var(--edge); }
+.bar .drag { flex:1; height:100%; }
+.bar button { all:unset; cursor:pointer; width:18px; text-align:center; color:var(--text); }
+.bar button:hover { color:var(--accent); }
+.wrap { padding:6px; }
+.lcd { background:var(--lcd-bg); border:1px solid var(--edge); border-radius:3px; padding:6px 8px; box-shadow:inset 0 0 8px #000; }
+#time { font:bold 26px "Consolas",monospace; color:var(--lcd); }
+#title { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; color:var(--lcd); font:12px "Consolas",monospace; }
+.row { display:flex; align-items:center; gap:6px; margin-top:6px; }
+.btns button { all:unset; cursor:pointer; min-width:34px; height:26px; text-align:center; line-height:26px; border-radius:3px;
+  background:linear-gradient(var(--hi),var(--panel)); border:1px solid var(--edge); color:var(--text); }
+.btns button:hover { color:var(--accent); }
+.btns button:active { background:var(--edge); }
+input[type=range] { accent-color:var(--accent); width:100%; }
+select, button.skin { background:var(--panel); color:var(--text); border:1px solid var(--edge); border-radius:3px; padding:2px 4px; }
+.list { flex:1; overflow:auto; background:var(--lcd-bg); border:1px solid var(--edge); margin:6px; }
+.list div { padding:3px 6px; cursor:pointer; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.list div.on { color:var(--accent); }
+.list div:hover { background:var(--hi); }
+.eq { display:flex; gap:8px; padding:8px; height:200px; }
+.eq .band { display:flex; flex-direction:column; align-items:center; flex:1; }
+.eq .band input { writing-mode: vertical-lr; direction: rtl; height:150px; width:18px; }
+.eq .band span { font-size:10px; color:var(--muted,#8a93a0); }
+.pl { display:flex; flex-direction:column; height:calc(100% - 22px); }
